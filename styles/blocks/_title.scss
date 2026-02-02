@@ -1,0 +1,25 @@
+@use '../media' as *;
+
+.title {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  text-transform: uppercase;
+  position: relative;
+  left: 15px;
+
+  @include mobile {
+    font-size: 22px;
+  }
+
+  &:before {
+    position: absolute;
+    left: -10px;
+    content: '';
+    background: var(--color-accent);
+    width: 4px;
+    height: 24px;
+    transform: rotate(9deg);
+  }
+}

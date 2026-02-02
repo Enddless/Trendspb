@@ -1,0 +1,37 @@
+@use 'media' as *;
+@use 'mixins' as *;
+
+:root {
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-grey: #666;
+  --color-grey-alt: #f8f8f8;
+  --color-accent: #fab001;
+
+  --font-family: 'Gilroy', sans-serif;
+  --third-family: 'DrukWideCyr', sans-serif;
+
+  --container-width: 1530px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 65px;
+
+  --transition-duration: 0.7s;
+
+  --box-shadow: 0 1px 16px 0 rgba(200, 148, 24, 0.3);
+
+  --bg-button-accent: linear-gradient(
+    90deg,
+    #ffcd58 0%,
+    #fab001 100%
+  );
+
+  --border-radius: 4px;
+  --border-radius-10: 10px;
+
+  --button-height: 53px;
+
+  @include desktop {
+    --section-padding-y: 50px;
+  }
+}

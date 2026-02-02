@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./styles/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js" defer></script>
+	<script src="./scripts/scripts.js" defer></script>
+
+	<title>Олтек</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__inner container container--header">
+			<a href="" class="header__logo logo">
+				<img src="./images/logo.svg" alt="Олтек" class="logo__image" width="190" height="34" loading="lazy" />
+			</a>
+			<nav class="header__menu hidden-tablet">
+				<ul class="header__menu-list">
+					<li class="header__menu-item">
+						<a href="/" class="header__menu-link">Металлокорпуса</a>
+					</li>
+					<li class="header__menu-item">
+						<a href="/" class="header__menu-link">Завод</a>
+					</li>
+					<li class="header__menu-item">
+						<a href="/" class="header__menu-link">Отзывы</a>
+					</li>
+					<li class="header__menu-item">
+						<a href="/" class="header__menu-link">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__contacts hidden-tablet">
+				<span class="header__contacts-wrapper">
+					<a href="tel:+74959884922" class="header__contacts-link header__contacts-link--phone">
+						+7 (495) 988-49-22
+					</a>
+
+					<a href="mailto:info@oltek.ru" class="header__contacts-link">
+						info@oltek.ru
+					</a>
+				</span>
+				<button class="header__button button button--accent hidden-tablet" type="button">Заказать
+					звонок</button>
+			</div>
+			<div class="header__contacts visible-tablet">
+				<button class="header__phone-icon" type="button" aria-label="Заказать
+				звонок">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M8.33373 16.4342C11.5277 23.3907 17.2111 28.9215 24.277 31.9199L25.4096 32.4245C28.001 33.5791 31.0473 32.7019 32.6278 30.3461L34.1079 28.1399C34.5892 27.4226 34.4427 26.4565 33.7704 25.9141L28.7507 21.8645C28.0134 21.2697 26.9292 21.4082 26.3651 22.1693L24.8122 24.2648C20.8276 22.2992 17.5925 19.0641 15.6269 15.0794L17.7223 13.5266C18.4834 12.9625 18.622 11.8783 18.0272 11.141L13.9774 6.12111C13.4351 5.44898 12.4693 5.30237 11.752 5.78332L9.53061 7.27281C7.16003 8.86233 6.28773 11.9337 7.46895 14.532L8.33243 16.4313L8.33373 16.4342Z"
+							fill="#FAB001" />
+					</svg>
+
+				</button>
+				<button class="button__burger-menu burger-button visible-tablet" type="button"
+					onclick="mobileOverlay.showModal()">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 12H37" stroke="#FAB001" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path d="M10 20L37 20" stroke="#FAB001" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round" />
+						<path d="M17 28L37 28" stroke="#FAB001" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+
+					<span class="visually-hidden">Open navigation menu</span>
+				</button>
+			</div>
+
+
+		</div>
+	</header>
+
+	<dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+		<form class="mobile-overlay__close-button-wrapper" method="dialog">
+			<button class="mobile-overlay__close-button cross-button" type="submit">
+				<span class="visually-hidden">Close navigation menu</span>
+			</button>
+		</form>
+		<div class="mobile-overlay__body">
+			<ul class="mobile-overlay__list">
+				<li class="mobile-overlay__item">
+					<a href="/" class="mobile-overlay__link">Металлокорпуса</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a href="/" class="mobile-overlay__link">Завод</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a href="/" class="mobile-overlay__link">Отзывы</a>
+				</li>
+				<li class="mobile-overlay__item">
+					<a href="/" class="mobile-overlay__link">Контакты</a>
+				</li>
+			</ul>
+			<div class="mobile-overlay__contacts">
+				<span class="mobile-overlay__contacts-wrapper">
+					<a href="tel:+74959884922"
+						class="mobile-overlay__contacts-link mobile-overlay__contacts-link--phone">
+						+7 (495) 988-49-22
+					</a>
+
+					<a href="mailto:info@oltek.ru" class="mobile-overlay__contacts-link">
+						info@oltek.ru
+					</a>
+				</span>
+				<button class="mobile-overlay__button button button--accent" type="button">Заказать
+					звонок</button>
+			</div>
+		</div>
+
+	</dialog>
+
+	<main class="content">
+		<section class="container container--hero">
+			<div class="hero">
+				<div class="hero__container">
+					<div class="hero__main">
+						<div class="hero__overlay">
+							<img class="hero__overlay-image" src="./images/hero-bg-vector.svg" width="541" height="519"
+								alt="" loading="lazy">
+						</div>
+						<div class="hero__body">
+							<h1 class="hero__title">Корпуса <span class="accent-text">УЭРМ</span> <br
+									class="hidden-mobile"> от ОЛТЕК ЭНЕРГО</h1>
+							<div class="hero__description">
+								<ul class="hero__description-list">
+									<li class="hero__description-item">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Сертификация по ГОСТ
+									</li>
+									<li class="hero__description-item">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Гарантия 5 лет
+									</li>
+								</ul>
+							</div>
+							<div class="hero__buttons">
+								<button class="hero__button button button--accent" type="button">Оставить
+									заявку</button>
+								<button class="hero__button button" type="button">Смотреть каталог</button>
+							</div>
+						</div>
+						<img class="hero__image" src="./images/hero-bg.png" width="498" height="596" alt=""
+							loading="lazy">
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section class="container container--metal">
+			<div class="metal">
+				<header class="metal__header">
+					<h2 class="title">
+						Металлокорпуса
+					</h2>
+					<div class="section__description"></div>
+				</header>
+				<ul class="metal__list grid grid--12">
+					<li class="metal__item">
+						<a href="/" class="metal-card__link">
+							<article class="metal-card  metal-card--row">
+								<img src="./images/metal-housings/image1.png" width="270" alt=""
+									class="metal-card__image" loading="lazy">
+								<div class="metal-card__body">
+									<span class="metal-card__tag accent-text">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Выгодно
+									</span>
+									<div class="metal-card__info">
+										<h3 class="metal-card__title">
+											УЭРМ на 4 квартиры
+										</h3>
+										<p class="metal-card__description">Высота 2700 мм</p>
+										<p class="metal-card__price"><span>26 000 ₽</span>/шт</p>
+										<button class="metal-card__button button button--accent">Оставить
+											заявку
+										</button>
+									</div>
+								</div>
+							</article>
+						</a>
+					</li>
+					<li class="metal__item">
+						<a href="/" class="metal-card__link">
+							<article class="metal-card">
+								<img src="./images/metal-housings/image2.png" width="240" alt=""
+									class="metal-card__image" loading="lazy">
+								<div class="metal-card__body">
+
+									<span class="metal-card__tag accent-text visually-hidden">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Выгодно
+									</span>
+									<div class="metal-card__info">
+										<h3 class="metal-card__title">
+											ЯУР 400
+										</h3>
+										<p class="metal-card__description"> </p>
+										<p class="metal-card__price"><span>1 357 ₽</span>/шт</p>
+										<button class="metal-card__button button button--accent visible-mobile">Оставить
+											заявку
+										</button>
+									</div>
+								</div>
+							</article>
+						</a>
+					</li>
+					<li class="metal__item">
+						<a href="/" class="metal-card__link">
+							<article class="metal-card">
+								<img src="./images/metal-housings/image3.png" width="240" alt=""
+									class="metal-card__image" loading="lazy">
+								<div class="metal-card__body">
+									<span class="metal-card__tag accent-text visually-hidden">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Выгодно
+									</span>
+									<div class="metal-card__info">
+										<h3 class="metal-card__title">
+											ЩУР 600
+										</h3>
+										<p class="metal-card__price"><span>1 737 ₽</span>/шт</p>
+										<button class="metal-card__button button button--accent visible-mobile">Оставить
+											заявку
+										</button>
+									</div>
+								</div>
+							</article>
+						</a>
+					</li>
+					<li class="metal__item">
+						<a href="/" class="metal-card__link">
+							<article class="metal-card">
+								<img src="./images/metal-housings/image4.png" width="240" alt=""
+									class="metal-card__image" loading="lazy">
+								<div class="metal-card__body">
+
+									<span class="metal-card__tag accent-text visually-hidden">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Выгодно
+									</span>
+									<div class="metal-card__info">
+										<h3 class="metal-card__title">
+											Короб НК 0,8мм
+										</h3>
+										<p class="metal-card__description">(нижняя часть УЭРМ) 700</p>
+										<p class="metal-card__price"><span>1 226 ₽</span>/шт</p>
+										<button class="metal-card__button button button--accent visible-mobile">Оставить
+											заявку
+										</button>
+									</div>
+								</div>
+							</article>
+						</a>
+					</li>
+					<li class="metal__item">
+						<a href="/" class="metal-card__link">
+							<article class="metal-card">
+								<img src="./images/metal-housings/image5.png" width="240" alt=""
+									class="metal-card__image" loading="lazy">
+								<div class="metal-card__body">
+
+									<span class="metal-card__tag accent-text visually-hidden">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Выгодно
+									</span>
+									<div class="metal-card__info">
+										<h3 class="metal-card__title">
+											Короб КЭТ 4
+										</h3>
+										<p class="metal-card__description">(средняя часть УЭРМ) </p>
+										<p class="metal-card__price"><span>2 281 ₽</span>/шт</p>
+										<button class="metal-card__button button button--accent visible-mobile">Оставить
+											заявку
+										</button>
+									</div>
+								</div>
+							</article>
+						</a>
+					</li>
+					<li class="metal__item">
+						<a href="/" class="metal-card__link">
+							<article class="metal-card metal-card--row">
+								<img src="./images/metal-housings/image6.png" width="270" alt=""
+									class="metal-card__image" loading="lazy">
+								<div class="metal-card__body">
+
+									<span class="metal-card__tag accent-text visually-hidden">
+										<span>
+											<img src="../images/icons/lightning.svg" alt="" width="13" height="26"
+												loading="lazy" class="">
+										</span>Выгодно
+									</span>
+									<div class="metal-card__info">
+										<h3 class="metal-card__title">
+											Короб Т-КЭТ 0,8мм
+										</h3>
+										<p class="metal-card__description">(средняя часть УЭРМ) 1200-Транзит</p>
+										<p class="metal-card__price"><span>2 018 ₽</span>/шт</p>
+										<button class="metal-card__button button button--accent visible-mobile">Оставить
+											заявку
+										</button>
+									</div>
+								</div>
+							</article>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="container container--reviews">
+			<div class="reviews">
+				<img src="./images/reviews-bg.png" alt="" width="520" height="378" loading="lazy"
+					class="reviews__image">
+				<div class="reviews__info">
+					<header class="reviews__header">
+						<h2 class="title">
+							Отзывы наших <br class="hidden-mobile"> клиентов
+						</h2>
+					</header>
+					<div class="reviews__description">
+						<div class="reviews__text">Мы ценим обратную связь от наших клиентов</div>
+						<div class="reviews__arrows">
+							<div class="reviews__arrow reviews__arrow--prev swiper-button-prev">
+								<svg width="11" height="22" viewBox="0 0 11 22" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 11L11 0L7.13514 11L11 22L0 11Z" fill="white" />
+								</svg>
+							</div>
+							<div class="reviews__arrow reviews__arrow--next swiper-button-next">
+								<svg width="11" height="22" viewBox="0 0 11 22" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 11L0 0L3.86486 11L0 22L11 11Z" fill="white" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__swiper swiper">
+
+						<ul class="reviews__list  swiper-wrapper">
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Качество отличное. Менеджеры быстрые. Удовлетворен
+								</p>
+								<p class="reviews__slide-author">Андрей А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Хорошая компания! Все удобно, честно и быстро.
+									Отличные
+									цены. Спасибо, буду обращаться еще.</p>
+								<p class="reviews__slide-author">Анна А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Профессионалы своего дела. Регулярно работаем с ними.
+								</p>
+								<p class="reviews__slide-author">Сергей А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Профессионалы своего дела. Регулярно работаем с ними.
+								</p>
+								<p class="reviews__slide-author">Сергей А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Профессионалы своего дела. Регулярно работаем с ними.
+								</p>
+								<p class="reviews__slide-author">Сергей А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Профессионалы своего дела. Регулярно работаем с ними.
+								</p>
+								<p class="reviews__slide-author">Сергей А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Профессионалы своего дела. Регулярно работаем с ними.
+								</p>
+								<p class="reviews__slide-author">Сергей А.</p>
+							</li>
+							<li class="reviews__slide swiper-slide">
+								<p class="reviews__slide-text">Профессионалы своего дела. Регулярно работаем с ними.
+								</p>
+								<p class="reviews__slide-author">Сергей А.</p>
+							</li>
+						</ul>
+						<div class="reviews__pagination swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer "></footer>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
+.button {
+  @include flex-center(true);
+
+  font-weight: 500;
+  height: var(--button-height);
+  padding: 16px 32px;
+  font-size: 17px;
+  color: var(--color-dark);
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius);
+
+  @include hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+  }
+
+  &--accent {
+    color: var(--color-dark);
+    background: var(--bg-button-accent);
+    background-size: 200% 200%;
+    background-position: 50% 0%;
+    border: 1px solid transparent;
+    transition:
+      background-position var(--transition-duration) ease,
+      border-color var(--transition-duration) ease;
+
+    @include hover {
+      background-position: 200% 0%;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
+.metal {
+  padding-inline: 120px;
+
+  @include desktop {
+    padding-inline: 60px;
+  }
+  @include tablet {
+    padding-inline: 0;
+  }
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  &__item {
+    grid-column: span 3;
+
+    &:first-child,
+    &:last-child {
+      grid-column: span 6;
+
+      @include tablet {
+        grid-column: span 12;
+      }
+    }
+
+    @include desktop {
+      grid-column: span 6;
+    }
+    @include tablet {
+      grid-column: span 12;
+    }
+  }
+}

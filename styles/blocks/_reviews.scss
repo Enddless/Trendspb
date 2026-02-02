@@ -1,0 +1,130 @@
+@use '../media' as *;
+
+.reviews {
+  background: var(--color-grey-alt);
+  padding: 70px 120px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+
+  @include desktop {
+    padding-inline: 60px;
+  }
+  @include tablet {
+    padding-inline: 20px;
+    flex-direction: column;
+  }
+
+  &__info {
+    margin-left: 154px;
+
+    @include desktop {
+      margin-left: 40px;
+    }
+    @include tablet {
+      margin-left: 0;
+    }
+    width: 100%;
+  }
+  &__description {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__swiper {
+    margin-top: 30px;
+    position: absolute;
+    left: 30%;
+    max-width: 1080px;
+
+    @include tablet {
+      --swiper-pagination-bottom: 0px;
+      --swiper-pagination-bullet-inactive-color: #ececec;
+      --swiper-pagination-color: var(--color-accent);
+      --swiper-pagination-bullet-inactive-opacity: 1;
+
+      max-width: calc(100% - 120px);
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 0;
+    }
+
+    @include mobile {
+      max-width: calc(100% - 20px);
+      left: 30px;
+      transform: translate(0, 0);
+    }
+  }
+  &__slide {
+    cursor: pointer;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius-10);
+    padding: 30px;
+    width: 360px;
+    height: 158px;
+    background: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop {
+      width: 330px;
+    }
+  }
+  &__arrows {
+    display: flex;
+    gap: 20px;
+    width: 100px;
+    height: 40px;
+
+    @include tablet {
+      display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: relative;
+      color: var(--color-light);
+
+      & svg {
+        width: 11px;
+        height: 22px;
+      }
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
+    }
+    .swiper-button-next {
+      background: var(--bg-button-accent);
+    }
+  }
+  &__arrow {
+    border-radius: 100%;
+    background: #ececec;
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+  &__pagination {
+    display: none;
+
+    @include tablet {
+      display: block;
+      position: relative;
+    }
+  }
+  &__image {
+    flex: 0;
+    @include tablet {
+      margin-top: 30px;
+      width: 100%;
+      height: auto;
+      order: 1;
+    }
+  }
+}
